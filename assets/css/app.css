@@ -1,0 +1,21 @@
+.nprogress-bar {
+	background: white !important;
+}
+
+.nprogress-peg {
+	box-shadow: 0 0 10px white, 0 0 5px white!important;
+}
+
+.nprogress-spinner-icon {
+	border-top-color: white!important;
+	border-left-color: white!important;
+}
+
+.searchHistory-container li {
+	cursor: pointer;
+}
+
+#my-popup .am-popup-bd div {
+	margin-left: auto;
+	margin-right: auto;
+}

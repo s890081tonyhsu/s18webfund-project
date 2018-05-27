@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FJU Find the Book</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <header class="am-topbar am-topbar-inverse am-topbar-fixed-top">
+        <div class="am-container">
+            <h1 class="am-topbar-brand">
+                <a href="#">FJU Find the Book</a>
+            </h1>
+
+            <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}">
+            	<span class="am-sr-only">導航切換</span> <span class="am-icon-bars" />
+            </button>
+
+            <div class="am-collapse am-topbar-collapse" id="topbar-collapse" data-am-scrollspynav="{offsetTop: 45}">
+                <ul class="am-nav am-nav-pills am-topbar-nav">
+                    <li><a href="#result">搜尋結果</a></li>
+                    <li><a href="#history">歷史關鍵字</a></li>
+                    <li><a href="#about">關於</a></li>
+                </ul>
+                <div class="am-topbar-right">
+                	<form class="am-topbar-form am-topbar-left am-form-inline" role="search">
+    	                <div class="am-form-group">
+    	                    <input id="searbo" type="text" class="am-form-field am-input-sm" placeholder="關鍵字">
+    	                </div>
+    	            </form>
+                    <button id="searchbook" class="am-btn am-btn-primary am-topbar-btn am-btn-sm am-btn-secondary">搜尋</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="result" class="am-container">
+        <h2>搜尋結果</h2>
+        <div class="bookdata-container">
+            <p>
+                請在上方搜尋欄位輸入關鍵字進行搜尋，由於搜尋方法不會更新整個頁面，請耐心等候進度條完成。
+            </p>
+        </div>
+    </div>
+
+    <div data-am-widget="gotop" class="am-gotop am-gotop-default am-hide">
+        <a href="#result" title="回到頂部">
+			<span class="am-gotop-title">Top</span>
+			<i class="am-gotop-icon am-icon-chevron-up"></i>
+    	</a>
+    </div>
+
+    <div id="history" class="am-container">
+        <h2>歷史關鍵字</h2>
+        <p>
+            此區會顯示你以前使用過的關鍵字，點選該關鍵字可以直接搜索。
+        </p>
+        <ul class="searchHistory-container am-list">
+        </ul>
+    </div>
+
+    <div id="about" class="am-container">
+        <h2>關於</h2>
+        <p>
+            此網頁僅用於搜尋輔大濟時樓圖書館的書籍位置，所有資料內容授權皆屬於<a href="http://www.fju.edu.tw/" target="_blank">私立輔仁大學</a>。<br />
+            使用<a href="https://jquery.com/" target="_blank">jQuery</a>、<a href="http://amazeui.org/" target="_blank">AmazeUI</a>進行程式以及網站構築，程式碼的部份採用<a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>授權。
+        </p>
+    </div>
+
+    <div class="am-modal am-modal-alert" tabindex="-1" id="my-alert">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">FJU Find the Book</div>
+                <div class="am-modal-bd">
+                ...
+                </div>
+                <div class="am-modal-footer">
+                <span class="am-modal-btn">確定</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="am-popup" id="my-popup">
+        <div class="am-popup-inner">
+            <div class="am-popup-hd">
+                <h4 class="am-popup-title">書籍位置</h4>
+                <span data-am-modal-close class="am-close">&times;</span>
+            </div>
+            <div class="am-popup-bd">
+            ...
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/jquery.maphilight.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
